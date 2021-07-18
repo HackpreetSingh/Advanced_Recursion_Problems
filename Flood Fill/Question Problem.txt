@@ -1,0 +1,23 @@
+An Array represented by an m x n integer grid array where a[i][j] represents the pixel value of the array.
+
+You are also given three integers representing x-index of target, y-index of target, and new value to which target should be changed. You should perform a flood fill on the array starting from the value a[xindex][yindex].
+
+To perform a flood fill, consider the starting value, plus any values connected 4-directionally to the starting value of the same color as the starting value, plus any values connected 4-directionally to those values (also with the same value), and so on. Replace the color of all of the aforementioned values with new value.
+
+eg :
+if rows=5 and columns=5 ;
+
+	1  2  3  2  1
+        1  2  2  2  2
+        2  2  2  2  1
+        1  1  1  2  1
+        1  2  1  1  1            
+Now user targets value at index [0][1] where previous value is 2 and new value user wants is 0. So, output should be :
+
+	1  0  3  0  1
+        1  0  0  0  0
+        0  0  0  0  1
+        1  1  1  0  1
+        1  2  1  1  1            
+
+Here, in the output, all the connected and neighbouring pixels having value 2 get changed to new value 0 but remaining values are unchanged.
